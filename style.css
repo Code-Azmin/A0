@@ -31,5 +31,6 @@
 
 .overlay.active {
     left: 0%;
+    top: 0;
 }
 
