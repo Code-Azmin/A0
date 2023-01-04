@@ -4,3 +4,7 @@ nav.addEventListener('click', (event) => {
     console.log({event})
     overlay.classList.toggle('active')
 });
+
+nav.addEventListener('click',() => {
+    nav.classList.toggle('active')
+});
