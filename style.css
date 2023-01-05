@@ -1,4 +1,4 @@
-.nav { 
+.nav{ 
     display: flex;
     height: 30px;
     width: 30px;
@@ -8,7 +8,7 @@
     flex-direction: column;
 }
 
-.nav span { 
+.nav span{ 
     display: block;
     background-color: black;
     height: 3px;
@@ -31,7 +31,7 @@
 
 
 
-.overlay {
+.overlay{
     background-color: red;
     height: 100vh;
     width: 100%;
@@ -43,11 +43,11 @@
 
 }
 
-.overlay.active {
+.overlay.active{
     left: 0%;
 }
 
-.overlay .combat {
+.overlay .combat{
     list-style-type: none;
     display: flex;
     flex-direction: column;
@@ -67,11 +67,6 @@
     letter-spacing: 5px;
     font-size: 25px;
     overflow: hidden;
-}
-
-.overlay .combat li a span{
-    position: absolute;
-    display: block;
 }
 
 .overlay .combat li a span:first-child{
@@ -115,7 +110,7 @@
     transition-delay: 0.30s;
 }
 
-.overlay .combat li a span:last-child{
+.overlay .combat li a span:nth-child(4){
     left: 0;
     bottom: -100%;
     width: 2px;
@@ -123,11 +118,8 @@
     background: linear-gradient(270deg,transparent,#2196f3);
 }
 
-.overlay .combat li a:hover span:last-child{
+.overlay .combat li a:hover span:nth-child(4){
     bottom: 100%;
     transition: 0.15s;
     transition-delay: 0.50s;
 }
-
-
-
