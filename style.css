@@ -16,6 +16,17 @@
     transition: all 0.25s linear;
 }
 
+body{
+    margin: 0;
+}
+.layout{
+    position: relative;
+    height: 100vh;
+    z-index: 0;
+    background: url('boxing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .nav.active span:nth-child(1){
     transform: translateY(8px) rotate(45deg);
 }
@@ -37,8 +48,9 @@
     position: absolute;
     z-index: -1;
     transition: all 0.25s linear;
-
 }
+
+
 
 .overlay.active{
     left: 0%;
@@ -124,3 +136,4 @@
     transition: 0.15s;
     transition-delay: 0.50s;
 }
+
