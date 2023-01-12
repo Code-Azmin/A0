@@ -3,9 +3,10 @@
     height: 30px;
     width: 30px;
     background-color: #ffffff;
-    padding: 2.5px;
+    padding: 15px;
     justify-content: space-evenly;
     flex-direction: column;
+    background-color: #f5f5dc;
 }
 
 .nav span{ 
@@ -16,9 +17,25 @@
     transition: all 0.25s linear;
 }
 
+.showcase{
+    display: flex;
+    justify-content: center;
+    height: 75%;
+    color: red;
+}
+
+#info{
+    z-index:0;
+}
+
+h1 .title{
+    display: block;
+}
+
 body{
     margin: 0;
 }
+
 .layout{
     position: relative;
     height: 100vh;
@@ -27,6 +44,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
 .nav.active span:nth-child(1){
     transform: translateY(8px) rotate(45deg);
 }
@@ -49,8 +67,6 @@ body{
     z-index: -1;
     transition: all 0.25s linear;
 }
-
-
 
 .overlay.active{
     left: 0%;
