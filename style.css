@@ -18,18 +18,22 @@
 }
 
 .showcase{
-    display: flex;
-    justify-content: center;
+    position: relative;
+    z-index: -1;
+    text-align: center;
     height: 75%;
     color: red;
 }
 
-#info{
-    z-index:0;
-}
 
 h1 .title{
     display: block;
+    position: relative;
+    font-family: 'Nosifer', cursive;
+    font-size: 50px;
+    letter-spacing: 20px;
+    padding: 5px;
+    bottom: 20px;
 }
 
 body{
