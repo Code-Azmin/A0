@@ -1,0 +1,472 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.4;
+    margin: 0;
+    
+}
+
+.menu-wrap{
+    position: fixed;
+    z-index: 1;
+}
+
+.menu-wrap .menu{
+    visibility: hidden;
+}
+
+.menu-wrap .toggler{
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px; 
+    opacity: 0;
+    
+}
+
+.menu-wrap .hamburger{
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 50px;
+    padding: 15px;
+    background-color:#f5f5dc;
+    display: flex;
+    align-items: center;
+}
+
+/* Hamburger Line [Middle] */
+
+ .menu-wrap .hamburger > div{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color:#ff0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger Lines [Top & Bottom] */
+
+.menu-wrap .hamburger > div:before,
+.menu-wrap .hamburger > div:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+/* Hamburger Line [Bottom] */
+
+.menu-wrap .hamburger > div:after{
+    top: 10px;
+}
+
+/* Toggler Animation */
+ 
+.menu-wrap .toggler:checked + .hamburger > div{
+    transform: rotate(135deg);
+    background-color: black;
+}
+
+/* Turns Lines into X */
+
+.menu-wrap .toggler:checked + .hamburger > div::before,
+.menu-wrap .toggler:checked + .hamburger > div::after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Rotate on hover when checked */
+
+.menu-wrap .toggler:checked:hover + .hamburger > div{
+    transform: rotate(225deg);
+} 
+
+/* Show Menu */
+
+.menu-wrap .toggler:checked ~ .menu{
+ visibility: visible;
+} 
+
+.menu-wrap .toggler:checked ~ .menu > div{
+    transform: scale(1);
+    transition-duration: 0.5s;
+    background-color: black;
+    opacity: 0.9;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div{
+    opacity: 1;
+    transition: opacity 1s ease;
+}
+
+.menu-wrap .menu{
+   position: fixed; 
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.menu-wrap .menu > div{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.menu-wrap .menu > div > div{
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0; 
+}
+
+.menu-wrap .menu > div > div > ul > li{
+    list-style: none;
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.menu-wrap .menu > div > div > ul > li > a{
+    position: relative;
+    display: inline-block;
+    color: #2196f3;
+    text-decoration: none;
+    margin: 20px;
+    padding: 5px 10px;
+    letter-spacing: 5px;
+    font-size: 25px;
+    overflow: hidden;
+}
+
+.menu-wrap .menu > div > div > ul > li > a span{
+    position: absolute;
+    display: block;
+}
+
+.menu-wrap .menu > div > div > ul > li > a span:nth-child(1){
+    top: 0;
+    left: -100%;
+    width: 150%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#2196f3);
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover span:nth-child(1){
+    left: 100%;
+    transition: 0.25s;
+}
+
+.menu-wrap .menu > div > div > ul > li > a span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#2196f3);
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover span:nth-child(2){
+    top: 100%;  
+    transition: 0.25s;
+    transition-delay: 0.25s;
+}
+
+.menu-wrap .menu > div > div > ul > li > a span:nth-child(3){
+    bottom: 0;
+    right: -100%;
+    width: 150%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#2196f3);
+}
+ 
+.menu-wrap .menu > div > div > ul > li > a:hover span:nth-child(3){
+    right: 100%;
+    transition: 0.25s;
+    transition-delay: 0.5s;
+}
+
+.menu-wrap .menu > div > div > ul > li > a span:nth-child(4){
+    bottom: -100%;
+    left: 0px;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#2196f3);
+}
+.menu-wrap .menu > div > div > ul > li > a:hover span:nth-child(4){
+    bottom: 100%;
+    transition: 0.25s;
+    transition-delay: 0.75s;
+}
+
+.menu-wrap .menu > div > div > ul > li > a:hover{
+    color: #6ab8f7;
+    box-shadow: 0 0 10px #2196f3,
+                0 0 40px #2196f3,
+                0 0 80px #2196f3;
+    transition-delay: 1s;
+}
+
+/* More Info Button */
+
+#info{
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 125px;
+    font-size: 21px;
+    padding: 12px 15px;
+    border-radius: 22px;
+    border-style: none;
+    box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.623);
+    background: black;
+    color: #ffffff;
+}
+
+.arrow{
+    display: block;
+    position: relative;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    top: 200px;
+    left: 150px;
+    opacity: 1;
+    width: 22px;
+    height: 22px;
+    transform: rotate(45deg);
+    animation: downward-arrow 2s infinite;
+}
+
+.arrow:nth-child(1){
+    animation-delay: -0.2s;
+}
+
+.arrow:nth-child(2){
+    animation-delay: -0.4s;
+}
+
+.showcase{
+    background: url('bb.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    ;
+}
+
+.showcase h1{
+    position: relative;
+    bottom: 10px;
+    font-size: 4rem;
+    
+}
+
+.showcase h1 .title{
+    display: block;
+    font-family: 'Cabin Sketch', cursive;
+    color: #ffd700;
+    letter-spacing: 20px;
+    font-size: 50px;
+}
+
+.showcase h1 .title:nth-child(1){
+    animation: title 1.5s forwards;
+}
+
+.showcase h1 .title:nth-child(2){
+    animation: title 1s forwards;
+}
+
+.showcase h1 .title:nth-child(3){
+    animation: title 0.5s forwards;
+}
+
+
+.title-xtra{
+    display: inline-block;
+    animation: downsideup 2s forwards;
+    color: black;
+}
+
+
+.showcase h1 .title .xtra{
+    display: inline-block;
+    position: relative;
+    animation: upsidedown 3s infinite;
+    color:black;
+}
+
+.showcase-x{
+    background-color:#f5f5dc;
+}
+
+.showcase-x-wrapper{
+    font-family: 'Sigmar One', cursive;
+    text-transform: capitalize;
+    font-size: 25px;
+    padding-top: 50px;
+    animation: shift-right 0.75s forwards;
+}
+
+.history{
+    font-family: 'New Tegomin', serif;
+    font-size: 30px;
+    line-height: 50px;
+    padding: 25px 30px 30px;
+    animation: shift-left 0.75s forwards;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes shift-left{
+    0% {
+        left: -500px
+    }
+    100% {
+        left: 0px
+    }
+}
+
+@keyframes shift-right{
+    0% {
+        right: -500px
+    }
+    100% {
+        right: 0px
+    }
+}
+
+
+@keyframes title{
+    0% {
+        transform: translateY(-500px);
+    } 
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes upsidedown{
+    0% {
+        transform:rotateX(0deg);
+    }
+    
+    100% {
+        transform:rotateX(360deg);
+    }
+    
+}
+
+@keyframes downsideup{ 
+    0% {
+        transform:rotateZ(0deg);
+    }
+
+    100% {
+        transform:rotateZ(360deg);
+    }
+}
+
+@keyframes downward-arrow{
+    0%{
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+        
+    }
+
+    50%{ 
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+        
+    @media(max-width: 768px){
+        body{
+
+            float:none;
+            text-align:center;
+            width: 100%;
+        
+    }
+}
+
+    @media(min-width:600px){
+        body{
+            float:none;
+            text-align:center;
+            width: 100%;      
+
+    }
+}
