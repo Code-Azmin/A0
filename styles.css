@@ -308,21 +308,22 @@ body{
 
 .showcase-x{
     background-color:#f5f5dc;
+    padding-bottom: 1px;
 }
 
 .showcase-x-wrapper{
     font-family: 'Sigmar One', cursive;
     text-transform: capitalize;
     font-size: 25px;
-    padding-top: 50px;
+    padding-top: 5px;
     animation: shift-right 0.75s forwards;
 }
 
 .history{
     font-family: 'New Tegomin', serif;
-    font-size: 30px;
-    line-height: 50px;
-    padding: 25px 30px 30px;
+    font-size: 20px;
+    line-height: 35px;
+    padding: 5px 315px 5px;
     animation: shift-left 0.75s forwards;
 }
 
