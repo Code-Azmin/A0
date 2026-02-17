@@ -323,8 +323,9 @@ body{
     font-family: 'New Tegomin', serif;
     font-size: 20px;
     line-height: 35px;
-    padding: 5px 315px 5px;
+    padding: 5px 315px 0px;
     animation: shift-left 0.75s forwards;
+    padding-bottom: 25px;
 }
 
 
