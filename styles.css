@@ -30,7 +30,7 @@ body{
     width: 40px;
     height: 50px;
     padding: 15px;
-    background-color:#f5f5dc;
+    background-color:#F8DAAC;
     display: flex;
     align-items: center;
 }
@@ -41,7 +41,7 @@ body{
     position: relative;
     width: 100%;
     height: 2px;
-    background-color:#ff0000;
+    background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,11 +98,11 @@ body{
     transform: scale(1);
     transition-duration: 0.5s;
     background-color: black;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .menu-wrap .toggler:checked ~ .menu > div > div{
-    opacity: 1;
+    opacity: 2;
     transition: opacity 1s ease;
 }
 
@@ -143,7 +143,7 @@ body{
     display: inline-block;
     color: #2196f3;
     text-decoration: none;
-    margin: 20px;
+    margin: 15px;
     padding: 5px 10px;
     letter-spacing: 5px;
     font-size: 25px;
@@ -165,7 +165,7 @@ body{
 
 .menu-wrap .menu > div > div > ul > li > a:hover span:nth-child(1){
     left: 100%;
-    transition: 0.25s;
+    transition: 0.1s;
 }
 
 .menu-wrap .menu > div > div > ul > li > a span:nth-child(2){
@@ -179,13 +179,13 @@ body{
 .menu-wrap .menu > div > div > ul > li > a:hover span:nth-child(2){
     top: 100%;  
     transition: 0.25s;
-    transition-delay: 0.25s;
+    transition-delay: 25s;
 }
 
 .menu-wrap .menu > div > div > ul > li > a span:nth-child(3){
     bottom: 0;
     right: -100%;
-    width: 150%;
+    width: 1%;
     height: 2px;
     background: linear-gradient(270deg,transparent,#2196f3);
 }
@@ -205,8 +205,7 @@ body{
 }
 .menu-wrap .menu > div > div > ul > li > a:hover span:nth-child(4){
     bottom: 100%;
-    transition: 0.25s;
-    transition-delay: 0.75s;
+
 }
 
 .menu-wrap .menu > div > div > ul > li > a:hover{
@@ -229,8 +228,8 @@ body{
     border-radius: 22px;
     border-style: none;
     box-shadow: 3px 3px 5px 3px rgba(0, 0, 0, 0.623);
-    background: black;
-    color: #ffffff;
+    background: #F8DAAC;
+    color: black;
     min-width: 22%;
 }
 
@@ -266,45 +265,35 @@ body{
 
 .showcase h1{
     position: relative;
-    bottom: 10px;
-    font-size: 4rem;
-    
+    font-size: 3.5em;
 }
 
 .showcase h1 .title{
     display: block;
     font-family: 'Cabin Sketch', cursive;
-    color: #ffd700;
-    letter-spacing: 20px;
+    letter-spacing: 10px;
     font-size: 50px;
 }
-
-.showcase h1 .title:nth-child(1){
-    animation: title 1.5s forwards;
-}
-
-.showcase h1 .title:nth-child(2){
-    animation: title 1s forwards;
-}
-
-.showcase h1 .title:nth-child(3){
-    animation: title 0.5s forwards;
-}
-
-
-.title-xtra{
-    display: inline-block;
-    animation: downsideup 2s forwards;
-    color: black;
-}
-
 
 .showcase h1 .title .xtra{
     display: inline-block;
     position: relative;
     animation: upsidedown 3s infinite;
-    color:black;
+    color: black;
 }
+
+.showcase h1 .title:nth-child(1){
+    animation: title 3s forwards;
+}
+
+.showcase h1 .title:nth-child(2){
+    animation: title 2s forwards;
+}
+
+.showcase h1 .title:nth-child(3){
+    animation: title 1s forwards;
+}
+
 
 .showcase-x{
     background-color:#f5f5dc;
